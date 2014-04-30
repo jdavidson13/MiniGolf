@@ -1,0 +1,36 @@
+package minigolf;
+
+/**
+ * @author Josh Duong
+ * @author Jon Davidson
+ * @author Shaz Hoesein
+ * @author John McLain
+ */
+
+public class CardStation {
+
+	int stationID;
+	int stationAtHole;
+	
+	/* Basic constructor method for new Card Station objects. */
+	public CardStation(int a, int b) {
+		stationID = a;
+		stationAtHole = b;
+	}
+	
+	/* Gets the user's input from the Card Station and returns the int value. */
+	public int getKeyPress() {
+		int keyPress = 0;
+		return keyPress;
+	}
+	
+	/* Prints the scores for a current round. */
+	public void printRound(int Round, int currentRound) {
+		
+	}
+	
+	/* Prints the customer's final score card. */
+	public void printCoupon() {
+	
+	}
+}
