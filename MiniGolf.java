@@ -1,5 +1,4 @@
 import static org.junit.Assert.*;
-
 import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,35 +13,34 @@ import org.junit.Test;
 public class MiniGolfTest {
 
 	// list of global variables
-	// ...
+	int gameID;
+	int maxGameID;
+	int minGameID;
 	// ...
 	// ...
 	
 	@Before
 	/* Initializes global test variables. */
 	public void setUp() {
-		
+		gameID = 5648842;
+		maxGameID = 999999;
+		minGameID = 1;
 	}
 
 	@Test
-	/* Test to see if gameID contains an illegal value which is either
-	 * outside the acceptable range of values or contains illegal characters. */
-	public void testGameIDContainsIllegalValue() {
-		int gameID = 665423;
-		assertNotNull(gameID);	
-		
-		int maxGameID = 99999;
-		int minGameID = 1;
-
-		if (gameID > maxGameID) {
-			fail(String.format("Value of gameID (%d) exceeds maximum value (%d).",
-					gameID, maxGameID));
-		}
-		
-		if (gameID < minGameID) { 
-			fail(String.format("Value of gameID (%d) exceeds minimum value (%d).",
-					gameID, minGameID));
-		}
+	public void testGameIDExceedsMaximumValue() {	
+		assertTrue(gameID < maxGameID);
 	}
 
+	@Test
+	public void testGameIDExceedsMinimumValue() {
+		assertTrue(gameID > minGameID);
+	}
+	
+	@Test
+	public void testGameIDIsNotNull() {
+		assertNotNull(gameID);
+	}
+	
+	
 }
