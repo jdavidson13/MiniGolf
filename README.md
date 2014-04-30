@@ -7,9 +7,9 @@ COP 2805-51052 Spring 2014 Java II class.
 Project Roadmap:
 ------------
 
-* *Main.class*
+* Main.class
   Skeleton class containing newRound and getRound methods.
-    
+  
   - *newRound*(Player, Course)
     Creates a new round object containing the roundID, playerID,
     selectedCourse and score array, and passes a reference to
