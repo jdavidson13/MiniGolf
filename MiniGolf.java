@@ -43,10 +43,6 @@ public class MiniGolfTest {
 			fail(String.format("Value of gameID (%d) exceeds minimum value (%d).",
 					gameID, minGameID));
 		}
-
-		else {
-			fail(String.format("gameID (%d) contains illegal value", gameID));
-		}
 	}
 
 }
