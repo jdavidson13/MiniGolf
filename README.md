@@ -24,10 +24,12 @@ Project Roadmap:
 
   - Player(int playerID, String playerName, int[] playerStrokes,
            int HolesPlayed)
-    Basic constructor method for the Player class. Holds values
-    to track the player's name, ID number, the number of holes
-    they have currently attempted, and their current number of
-    strokes.
+      / 
+Basic constructor method for the Player class. Holds values
+        
+to track the player's name, ID number, the number of holes
+        they have currently attempted, and their current number of
+        strokes.
 
   - int getPlayerStrokes(int hole)
     Returns the number of strokes for a given hole number from
