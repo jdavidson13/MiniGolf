@@ -1,4 +1,4 @@
-package minigolf;
+package MiniGolf;
 
 /**
  * @author Josh Duong
