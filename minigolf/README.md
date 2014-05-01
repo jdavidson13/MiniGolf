@@ -11,11 +11,11 @@ Project Roadmap:
 
   Skeleton class containing newRound and getRound methods.
   
-  - newRound(Player, Course)
+  - newRound(ArrayList<Player>, Course)
 
-    Creates a new round object containing the roundID, playerID,
-    selectedCourse and score array, and passes a reference to
-    the newly created Round object.
+    Creates a new round object containing a list of Player
+    objects (multiple players can play in the same round) and
+    a single Course object.
     
 
 * Player.class
@@ -48,7 +48,7 @@ Project Roadmap:
   coursePar, and courseNumberOfHoles values.
 
   - Course(int courseID, String courseName,
-           int NumberOfHoles, int[] coursePar)
+           int numberOfHoles, int[] coursePar)
 
     Basic constructor method for the Course class. Holds values
     to track the course name and ID, the number of holes in the
@@ -93,6 +93,12 @@ Project Roadmap:
   - Course getCourse()
 
     Returns the Course object associated with the current Round.
+    
+  - int getCurrentScore(Player, Course)
+   
+    Calculates the score for a given player based on the par for
+    the current hole and the number of strokes, and returns the
+    difference as an integer.
 
 * CardStation.class
 
