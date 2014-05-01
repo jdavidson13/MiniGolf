@@ -19,9 +19,6 @@ public class CourseTest {
     Course legalCourse = new Course( legalCourseID, legalCourseName, 
                                      legalNumberOfHoles, coursePar );
     
-    public CourseTest() {
-    }
-    s
     @Test
     public void testGetCourseIDMatch() {
         System.out.println("Testing getCourseID returns a match:");
