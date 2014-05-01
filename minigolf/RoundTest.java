@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestRound {
+public class RoundTest {
 	
 	static Course course;
 	static Course testCourse;
