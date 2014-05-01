@@ -16,6 +16,7 @@ public class CourseTest {
     
     @Before
     public void setUp() {
+        
     }
     
     @After
