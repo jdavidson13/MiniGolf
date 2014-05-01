@@ -1,4 +1,4 @@
-package MiniGolf;
+package minigolf;
 
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -21,7 +21,7 @@ public class CourseTest {
     
     public CourseTest() {
     }
-    
+    s
     @Test
     public void testGetCourseIDMatch() {
         System.out.println("Testing getCourseID returns a match:");

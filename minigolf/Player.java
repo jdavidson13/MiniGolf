@@ -1,4 +1,4 @@
-package MiniGolf;
+package minigolf;
 
 /**
  * @author Josh Duong
@@ -10,9 +10,9 @@ package MiniGolf;
 public class Player {
 	
 	private int playerID;
-	private static String playerName;
-	private static int[] playerStrokes;
-	private static int holesPlayed;
+	private String playerName;
+	private int[] playerStrokes;
+	private int holesPlayed;
 
 	/* Basic constructor method for new Player objects. */
 	public Player(int id, String name) {
@@ -20,17 +20,13 @@ public class Player {
 		playerName = name;
 	}
 	
-	public Player(Player playerName2) {
-		// TODO Auto-generated constructor stub
-	}
-
 	/* Get and return the player's ID number. */
 	public int getPlayerID() {
 		return playerID;
 	}
 	
 	/* Get and return the player's name. */
-	public static String getPlayerName() {
+	public String getPlayerName() {
 		return playerName;
 	}
 	
@@ -40,7 +36,7 @@ public class Player {
 	}
 	
 	/* Get and return the number of holes the player has played. */
-	public static int getHolesPlayed() {
+	public int getHolesPlayed() {
 		return holesPlayed;
 	}
 	

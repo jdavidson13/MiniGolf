@@ -1,4 +1,4 @@
-package MiniGolf;
+package minigolf;
 import java.io.Console;
 import java.util.ArrayList;
 
