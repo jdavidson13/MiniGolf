@@ -1,15 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package minigolf;
 
+import org.junit.*;
+import static org.junit.Assert.*;
+
 /**
- *
- * @author jon
+ * @author Josh Duong
+ * @author Jon Davidson
+ * @author Shaz Hoesein
+ * @author John McLain
  */
 public class CourseTest {
+    
+    public CourseTest() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
     
 }
