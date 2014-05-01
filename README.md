@@ -30,15 +30,36 @@ Project Roadmap:
     to track the player's name, ID number, the number of holes
     they have currently attempted, and their current number of
     strokes.
+    
+  - Player(int playerID, String playerName)
 
-  - int getPlayerStrokes(int hole)
+    Basic constructor method for new Player objects. Accepts an
+    integer value representing the player's ID number, and a
+    String representing the player's name.
 
-    Returns the number of strokes for a given hole number from
-    the player's playerStrokes[] array.
+  - int getPlayerID()
+
+    Returns the Player's ID number.
+    
+  - String getPlayerNameD()
+
+    Returns the Player's name.
+    
+  - int[] getPlayerStrokes()
+
+    Returns an array of integers containing the Player's number
+    of attempted strokes, where each position in the array
+    represents a seperate hole in the player's current game.
 
   - int getHolesPlayed()
 
     Returns the number of holes the player has currently played.
+
+  - void updateScore(Cardstation station)0
+
+    Updates the Player's number of strokes for the current hole
+    based on input from a given Swipe Card Station keypad
+    terminal. Invokes the getKeyPress() method to capture input.
 
 
 * Course.class
@@ -69,7 +90,7 @@ Project Roadmap:
     Simple get method which returns the number of holes for the
     current Course object.
 
-  - String getCoursePar(int holeNumber)
+  - String getCoursePar(int hole)
 
     Simple get method which, given a hole number, returns the
     par number of strokes for the current Course object.
@@ -95,7 +116,7 @@ Project Roadmap:
     Returns the Course object associated with the current Round.
     
   - int getCurrentScore(Player, Course)
-   
+
     Calculates the score for a given player based on the par for
     the current hole and the number of strokes, and returns the
     difference as an integer.
