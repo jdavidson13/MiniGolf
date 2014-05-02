@@ -10,6 +10,12 @@ import java.util.ArrayList;
 
 public class Main {
 
+	public static Main refOBJ;
+	
+	public Main(Player playerName, Course course, Player holesPlayed) {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public static void main(String[] args) {
 		
 	}
@@ -18,5 +24,10 @@ public class Main {
 	public Round newRound(ArrayList<Player> players, Course course) {		
 		Round r = new Round(players, course);
 		return r;
+	}
+	public static Main round(Player playerName, Course course, Player holesPlayed) {
+		Main obj = new Main(playerName, course, holesPlayed);
+		refOBJ = obj;
+		return refOBJ;
 	}
 }
