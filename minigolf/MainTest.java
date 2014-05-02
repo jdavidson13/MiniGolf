@@ -10,47 +10,49 @@ import org.junit.Test;
 
 public class MainTest {
 	
+	String pName = "jjjh";
+	String legalCourseName = "Some Course";
 	String name = "";
-	
 	int legalCourseID = 1;
-    String legalCourseName = "Some Course";
-    int legalNumberOfHoles = 10;
+    int legalNumberOfHoles = 18;
     int[] coursePar = {};
+    int holesPlay = 10;
+    
+    Player playInfo = new Player(holesPlay, pName);
     
     Course legalCourse = new Course( legalCourseID, legalCourseName, 
                                      legalNumberOfHoles, coursePar );
-	
-    int holesPlay = 10;
     
     Main mainTest = Main(name, legalCourse, holesPlay);
     
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	private Main Main(String name2, Course legalCourse2, int holesPlayed2) {
+    private Main Main(String name2, Course legalCourse2, int holesPlay2) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
+    
+    @Test
+    public void testPlayerName() {
+    	String name = playInfo.getPlayerName();
+    	assertNotNull(name);
+    	equals(playInfo.getPlayerName() != "");
+    	assertNull(name);
+    }
+    
 	@Test
-	public void test() {
+	public void testMainObject() {
 		equals(Main.round(null, null, null) == mainTest);
 		equals(Main.refOBJ != mainTest);
 		assertNotNull(Main.refOBJ);
+		assertNull(Main.refOBJ);
+	}
+	
+	@Test
+	public void testPlayer() {
+		int strokes = playInfo.getHolesPlayed();
+		int golfCourse = legalCourse.getNumberOfHoles();
+		equals(strokes > 0);
+		equals(strokes <= golfCourse);
+		assertEquals(golfCourse, strokes);
 	}
 
 }
