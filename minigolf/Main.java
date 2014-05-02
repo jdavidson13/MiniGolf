@@ -12,6 +12,10 @@ public class Main {
 
 	public static Main refOBJ;
 	
+	public Player(String name) {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Main(Player playerName, Course course, Player holesPlayed) {
 		// TODO Auto-generated constructor stub
 	}
