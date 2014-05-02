@@ -22,6 +22,11 @@ public class Course {
 		par = coursePar;
 	}
 	
+	public Course(int legalCourseID, int legalCourseID2,
+		String legalCourseName, int legalNumberOfHoles, int[] coursePar2) {
+		// TODO Auto-generated constructor stub
+	}
+	
 	/* Get and return the course's ID. */
 	public int getCourseID() {
 		return courseID;
