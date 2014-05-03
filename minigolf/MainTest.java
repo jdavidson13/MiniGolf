@@ -35,12 +35,23 @@ public class MainTest {
 		if(players != 0 ) {
 			System.out.println("New Test Round");
 			scoreCard -= 0;	
+			assertEquals(scoreCard, 0);
+			assertEquals(players, 0);
 		}else if(swings.getPlayerStrokes(0) == course.getCoursePar(0)){
 			scoreCard = scoreCard + 1;
+			assertEquals(scoreCard, 0);
+			equals(scoreCard < 0);
+			assertNotNull(swings.getPlayerStrokes(0));
 		}else if(swings.getPlayerStrokes(0) > course.getCoursePar(0)) {
 			scoreCard = scoreCard + (course.getCoursePar(0) - swings.getPlayerStrokes(0));
+			assertEquals(scoreCard, 0);
+			equals(scoreCard < 0);
+			assertNotNull(swings.getPlayerStrokes(0));
 		}else if (swings.getPlayerStrokes(0) < course.getCoursePar(0)) {
-			
+			scoreCard = scoreCard + 0;
+			assertEquals(scoreCard, 0);
+			equals(scoreCard < 0);
+			assertNotNull(swings.getPlayerStrokes(0));
 		}
 	}
 	
