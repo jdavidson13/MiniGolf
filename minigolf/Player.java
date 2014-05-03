@@ -31,8 +31,8 @@ public class Player {
 	}
 	
 	/* Get and return the player's strokes for a given hole. */
-	public int[] getPlayerStrokes() {
-		return playerStrokes;
+	public int getPlayerStrokes(int swings) {
+		return playerStrokes[swings];
 	}
 	
 	/* Get and return the number of holes the player has played. */
