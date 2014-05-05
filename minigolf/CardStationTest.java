@@ -1,4 +1,4 @@
- package minigolf;
+package minigolf;
 import java.io.Console;
 import java.util.ArrayList;
 
@@ -14,12 +14,17 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 
-public class CardStation {
+public class CardStationTest 
 
-	static CardStation;
+	static CardStationTest;
 
 	private int stationID;
 	private int stationPosition;
+
+        @BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+
+
 
 }
 
@@ -52,8 +57,24 @@ public class CardStation {
 		System.out.println("\nteststationPositionIsNotNull:");
 		assertNotNull(station.getstationPosition());
 		System.out.println("\t" + station.getPosition() + " = passed\n");
+	
+
 	}
 
+@Test /* Test to see if Station Position is valid. */
+	public void teststationPositionIsNull() {
+		System.out.println("\nteststationPositionIsNotNull:");
+		assertNotNull(station.getstationPosition());
+		System.out.println("\t" + station.getPosition() + " = failed\n");
+
+          }
+
+@Test /* Test to see if Station ID valid. */
+	public void testStationIDIsNotNull() {
+		System.out.println("\nteststationIDIsNotNull:");
+		assertNotNull(station.getstationID());
+		System.out.println("\t" + station.getPosition() + " = failed\n");
+	
+	 }
 }
-
-
+	
