@@ -31,7 +31,7 @@ public class CourseTest {
     public void testGetCourseIDIsPositive() {
         System.out.println("Testing getCourseID rejects negative numbers:");
         Course negativeCourse = new Course ( -1, legalCourseName,
-                                             legalNumberOfHoles, coursePar );
+                                            legalNumberOfHoles, coursePar );
         int result = negativeCourse.getCourseID();
         assert result > 0;
     }
@@ -47,7 +47,7 @@ public class CourseTest {
     public void testGetCourseNameIsNull() {
         System.out.println("Testing getCourseName when fed a null:");
         Course nullCourse = new Course ( legalCourseID, null,
-                                         legalNumberOfHoles, coursePar );
+                                     legalNumberOfHoles, coursePar );
         String result = legalCourse.getCourseName();
         assertNotNull( result );
     }
