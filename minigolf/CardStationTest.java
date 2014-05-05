@@ -68,7 +68,8 @@ public class CardStationTest {
 	@Test /* Test to see if Station Position is valid. */
 		public void teststationPositionIsNull() {
 			System.out.println("\nteststationPositionIsValid:");
-			//Your code to compare it to minStationPosition and maxStationPosition here
+			for (int s : s.getStationPosition()) {
+			assertTrue(n < maxStationPosition && n > minStationPosition);
 			System.out.println("\t" + s.getStationPosition() + " = failed\n");
 	
 		}
@@ -76,7 +77,8 @@ public class CardStationTest {
 	@Test /* Test to see if Station ID valid. */
 		public void testStationIDIsNotNull() {
 			System.out.println("\nteststationIDIsNotNull:");
-			//Your code to compare it to minStationID and maxStationID here
+			for (int s : s.getStationID()) {
+			assertTrue(n < maxStationID && n > minStationID);
 			System.out.println("\t" + s.getStationID() + " = passed");
 		
 		 }
