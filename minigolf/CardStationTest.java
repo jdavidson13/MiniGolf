@@ -48,7 +48,7 @@ public class CardStationTest {
 			System.out.println("\ntestUserInputIsNotNull:");
 			assertNotNull(s.getKeyPress());
 			System.out.println("\t" + this + " = passed\n");
-		}
+	}
 	
 	@Test /* Test to see if card swipe is valid. */
 		public void testSwipeIsValid() {
@@ -56,30 +56,30 @@ public class CardStationTest {
 			assertTrue(s.getKeyPress() >= minKeyPress);
 			assertTrue(s.getKeyPress() <= maxKeyPress);
 			System.out.println("\t" + this + " = passed\n");
-		}
+	}
 	
 	@Test /* Test to see if Station Position is null. */
 		public void teststationPositionIsNotNull() {
 			System.out.println("\nteststationPositionIsNotNull:");
 			assertNotNull(s.getStationPosition());
 			System.out.println("\t" + s.getStationPosition() + " = passed\n");
-		}
+	}
 	
 	@Test /* Test to see if Station Position is valid. */
 		public void teststationPositionIsNull() {
 			System.out.println("\nteststationPositionIsValid:");
-			for (int s : s.getStationPosition()) {
-			assertTrue(s < maxStationPosition && s > minStationPosition);
+			assertTrue(s.getStationPosition() <= maxStationPosition 
+					&& s.getStationPosition() >= minStationPosition);
 			System.out.println("\t" + s.getStationPosition() + " = failed\n");
 	
-		}
+	}
 	
 	@Test /* Test to see if Station ID valid. */
 		public void testStationIDIsNotNull() {
 			System.out.println("\nteststationIDIsNotNull:");
-			for (int s : s.getStationID()) {
-			assertTrue(s < maxStationID && s > minStationID);
+			assertTrue(s.getStationID() <= maxStationID
+					&& s.getStationID() >= minStationID);
 			System.out.println("\t" + s.getStationID() + " = passed");
 		
-		 }
+	 }
 }
