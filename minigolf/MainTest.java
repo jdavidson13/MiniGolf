@@ -1,67 +1,44 @@
 package minigolftest;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.*;
 
 public class MainTest {
-
-	static int numOfPlayers = 1;
-	static int legalCourseID = 1;
-    String legalCourseName = "SomeCourse";
-    int legalNumberOfHoles = 3;
-    int[] coursePar = {3, 2 , 1};
-	int [] strokes = {1, 2 , 3};
-	static int scoreCard = 0;
-	Player swings = new Player(legalCourseID, legalCourseName, strokes);
-    Main newRound = new Main (numOfPlayers);
-	Course course = new Course(legalCourseID, 
-    							legalCourseName, 
-    							legalNumberOfHoles, 
-    							coursePar);
-    
-	@Test
-	public void newRoundTest() {
-		int players = newRound.getPlayer();
-		assertNotNull(players);
-		assertNotNull(scoreCard);
-		assertNotNull(swings.getPlayerStrokes(0));
-		if(players != 0 ) {
-			System.out.println("New Test Round");
-			scoreCard -= 0;	
-			assertEquals(scoreCard, 0);
-			assertEquals(players, 0);
-		}else if(swings.getPlayerStrokes(0) == course.getCoursePar(0)){
-			scoreCard = scoreCard + 1;
-			assertEquals(scoreCard, 0);
-			equals(scoreCard < 0);
-			assertNotNull(swings.getPlayerStrokes(0));
-		}else if(swings.getPlayerStrokes(0) > course.getCoursePar(0)) {
-			scoreCard = scoreCard + (course.getCoursePar(0) - swings.getPlayerStrokes(0));
-			assertEquals(scoreCard, 0);
-			equals(scoreCard < 0);
-			assertNotNull(swings.getPlayerStrokes(0));
-		}else if (swings.getPlayerStrokes(0) < course.getCoursePar(0)) {
-			scoreCard = scoreCard + 0;
-			assertEquals(scoreCard, 0);
-			equals(scoreCard < 0);
-			assertNotNull(swings.getPlayerStrokes(0));
-		}
-	}
 	
-	@AfterClass
-	public static void reset() throws Exception {
-		numOfPlayers = 0;
-		scoreCard = 0;
-		legalCourseID = 1;
+	ArrayList<Player> players;
+	Course sCourse;
+	Round player = new Round(players, sCourse);
+	
+	int playerID = 1;
+	String pName = "";
+	int [] swings = {1 , 2, 3};
+	
+	Player pInfo = new Player(playerID, pName, swings);
+	
+	int legalCourseID = 1;
+    String legalCourseName = "";
+    int legalNumberOfHoles;
+    int[] coursePar = {};
+   
+    Course c = new Course(legalCourseID, legalCourseName, legalNumberOfHoles, coursePar);
+	
+    @Test
+	public void testNewRound () {
+    	
+    	int r = pInfo.getPlayerStrokes(0);
+    	System.out.println(r);
+		ArrayList<Player> p = player.getPlayers();
+		if(p != null) {
+			System.out.println("Test New Round");
+			equals(p != null);
+			assertEqual(c.getCoursePar(0), pInfo.getPlayerStrokes(0));
+		}
+		
+	}
+
+	private void assertEqual(int coursePar2, int playerStrokes) {
+		// TODO Auto-generated method stub
 		
 	}
 }
-
-
