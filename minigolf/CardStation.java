@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author John McLain
  */
 
-public class CardStation {
+ public class CardStation {
 
 	private int stationID;
 	private int stationPosition;
