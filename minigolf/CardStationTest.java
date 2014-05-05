@@ -21,9 +21,6 @@ public class CardStation {
 	private int stationID;
 	private int stationPosition;
 
-
-
-
 }
 
 @Test /* Test to check for user input at card station. */
