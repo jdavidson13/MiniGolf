@@ -19,7 +19,7 @@ public class MainTest {
 	int legalCourseID = 1;
     String legalCourseName = "";
     int legalNumberOfHoles;
-    int[] coursePar = {};
+    int[] coursePar = {3, 2, 1};
    
     Course c = new Course(legalCourseID, legalCourseName, legalNumberOfHoles, coursePar);
 	
