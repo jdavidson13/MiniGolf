@@ -1,4 +1,6 @@
 package minigolf;
+import static org.junit.Assert.*;
+
 import java.io.Console;
 import java.util.ArrayList;
 
@@ -10,71 +12,72 @@ import java.util.ArrayList;
  * @author John McLain
  */
 
-
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+public class CardStationTest {
 
-public class CardStationTest 
+	static CardStation s;
 
-	static CardStationTest;
+	private static int minStationID;
+	private static int maxStationID;
+	
+	private static int minStationPosition;
+	private static int maxStationPosition;
+	
+	private static int minKeyPress;
+	private static int maxKeyPress;
 
-	private int stationID;
-	private int stationPosition;
-
-        @BeforeClass
+	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 
+		s = new CardStation(0, 0);
+		
+		minStationID = 0;
+		maxStationID = 99;
+		
+		minStationPosition = 0;
+		maxStationPosition = 99;
+		
+		minKeyPress = 0;
+		maxKeyPress = 9;
+	}
 
-
+	@Test /* Test to check for user input at card station. */
+		public void testUserInputNotNull() {
+			System.out.println("\ntestUserInputIsNotNull:");
+			assertNotNull(s.getKeyPress());
+			System.out.println("\t" + this + " = passed\n");
+		}
+	
+	@Test /* Test to see if card swipe is valid. */
+		public void testSwipeIsValid() {
+			System.out.println("\ntestSwipeIsValid:");
+			assertTrue(s.getKeyPress() >= minKeyPress);
+			assertTrue(s.getKeyPress() <= maxKeyPress);
+			System.out.println("\t" + this + " = passed\n");
+		}
+	
+	@Test /* Test to see if Station Position is null. */
+		public void teststationPositionIsNotNull() {
+			System.out.println("\nteststationPositionIsNotNull:");
+			assertNotNull(s.getStationPosition());
+			System.out.println("\t" + s.getStationPosition() + " = passed\n");
+		}
+	
+	@Test /* Test to see if Station Position is valid. */
+		public void teststationPositionIsNull() {
+			System.out.println("\nteststationPositionIsValid:");
+			//Your code to compare it to minStationPosition and maxStationPosition here
+			System.out.println("\t" + s.getStationPosition() + " = failed\n");
+	
+		}
+	
+	@Test /* Test to see if Station ID valid. */
+		public void testStationIDIsNotNull() {
+			System.out.println("\nteststationIDIsNotNull:");
+			//Your code to compare it to minStationID and maxStationID here
+			System.out.println("\t" + s.getStationID() + " = passed");
+		
+		 }
 }
-
-@Test /* Test to check for user input at card station. */
-	public void testUserInputNotNull() {
-
-
-		System.out.println("\ntestUserInputIsNotNull:");
-		assertNotNull(user);
-		System.out.println("\t" + user + " = passed\n");
-	}
-
-
-@Test /* Test to see if card swipe is valid. */
-	public void testSwipeNotNull() {
-		System.out.println("\ntestSwipeIsValid:");
-		assertTrue(player instanceof Player);
-		System.out.println("\t" + swipe + " = passed\n");
-	}
-
-@Test /* Test to see if Station ID is null. */
-	public void testStationIDIsNotNull() {
-		System.out.println("\ntestStationIDIsNotNull:");
-		assertNotNull(card.getStationID());
-		System.out.println("\t" + card.getStationID() + " = passed\n");
-	}
-
-@Test /* Test to see if Station Position is null. */
-	public void teststationPositionIsNotNull() {
-		System.out.println("\nteststationPositionIsNotNull:");
-		assertNotNull(station.getstationPosition());
-		System.out.println("\t" + station.getPosition() + " = passed\n");
-	
-
-	}
-
-@Test /* Test to see if Station Position is valid. */
-	public void teststationPositionIsNull() {
-		System.out.println("\nteststationPositionIsNotNull:");
-		assertNotNull(station.getstationPosition());
-		System.out.println("\t" + station.getPosition() + " = failed\n");
-
-          }
-
-@Test /* Test to see if Station ID valid. */
-	public void testStationIDIsNotNull() {
-		System.out.println("\nteststationIDIsNotNull:");
-		assertNotNull(station.getstationID());
-		System.out.println("\t" + station.getPosition() + " = failed\n");
-	
-	 }
-}
-	
